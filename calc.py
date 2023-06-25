@@ -49,12 +49,12 @@ else:
 	result = 0
 
 	try:
-		if "." in a or "." in b:
-			a = int(a)
-			b = int(b)
-		else:
+		if  "." in a or "." in b:
 			a = float(a)
 			b = float(b)
+		else:
+			a = int(a)
+			b = int(b)
 		if operator == "+":
 			result = add(a, b)
 		elif operator == "-":
@@ -67,11 +67,6 @@ else:
 			result = pow(a, b)
 		else:
 			print("Invalid Operator")
-		if isinstance(result, float):
-			if result.is_integer():
-				result = int(result)
-			else:
-				result = float(result)
-			print(result)
+		print(result)
 	except ValueError:
 		print("Invalid Number")
